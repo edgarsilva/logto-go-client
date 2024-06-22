@@ -2,6 +2,7 @@ package client
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -49,6 +50,10 @@ func (logtoClient *LogtoClient) HandleSignInCallback(request *http.Request) erro
 		ExpiresAt: time.Now().Unix() + int64(codeTokenResponse.ExpireIn),
 	}
 
+	fmt.Println("---->AccessToken", codeTokenResponse.AccessToken)
+	fmt.Println("---->RefreshToken", codeTokenResponse.RefreshToken)
+	fmt.Println("---->Scope", codeTokenResponse.Scope)
+	fmt.Println("---->IdToken", codeTokenResponse.IdToken)
 	// - Treat `scopes` as `empty` to construct the default access token key
 	accessTokenKey := buildAccessTokenKey([]string{}, "", "")
 	verificationErr := logtoClient.verifyAndSaveTokenResponse(
