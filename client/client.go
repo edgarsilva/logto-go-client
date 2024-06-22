@@ -6,7 +6,7 @@ import (
 
 	"golang.org/x/exp/slices"
 
-	"github.com/logto-io/go/core"
+	"github.com/edgarsilva/logto-go-client/core"
 )
 
 type AccessToken struct {

@@ -5,7 +5,7 @@ import (
 	"net/url"
 
 	"github.com/go-jose/go-jose/v4"
-	"github.com/logto-io/go/core"
+	"github.com/edgarsilva/logto-go-client/core"
 )
 
 func (logtoClient *LogtoClient) fetchOidcConfig() (core.OidcConfigResponse, error) {

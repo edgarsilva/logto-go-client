@@ -1,4 +1,5 @@
-module github.com/logto-io/go
+// module github.com/logto-io/go
+module github.com/edgarsilva/logto-go-client
 
 go 1.21
 

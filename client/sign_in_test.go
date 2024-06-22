@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/agiledragon/gomonkey/v2"
-	"github.com/logto-io/go/core"
+	"github.com/edgarsilva/logto-go-client/core"
 	"github.com/stretchr/testify/assert"
 )
 

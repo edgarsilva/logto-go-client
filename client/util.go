@@ -5,7 +5,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/logto-io/go/core"
+	"github.com/edgarsilva/logto-go-client/core"
 )
 
 func GetOriginRequestUrl(request *http.Request) string {

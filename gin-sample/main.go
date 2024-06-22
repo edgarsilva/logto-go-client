@@ -5,15 +5,13 @@ import (
 	"os"
 	"strings"
 
+	"github.com/edgarsilva/logto-go-client/client"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/memstore"
 	"github.com/gin-gonic/gin"
-	"github.com/logto-io/go/client"
 )
 
-var (
-	ContentTypeHtml = "text/html; charset=utf-8"
-)
+var ContentTypeHtml = "text/html; charset=utf-8"
 
 func main() {
 	logtoConfig := &client.LogtoConfig{
@@ -84,7 +82,6 @@ func main() {
 		logtoClient := client.NewLogtoClient(logtoConfig, &SessionStorage{session: session})
 
 		idTokenClaims, err := logtoClient.GetIdTokenClaims()
-
 		if err != nil {
 			ctx.String(http.StatusOK, err.Error())
 		}
